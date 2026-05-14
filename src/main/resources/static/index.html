@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Livraria API</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Livraria API</h1>
+      <p>Gerenciamento de autores e livros</p>
+    </div>
+    <button id="refreshButton" type="button">Atualizar</button>
+  </header>
+
+  <main class="layout">
+    <section class="panel">
+      <div class="panelHeader">
+        <h2>Autores</h2>
+        <span id="authorCount">0</span>
+      </div>
+
+      <form id="authorForm" class="form">
+        <input id="authorId" type="hidden">
+        <label>
+          Nome
+          <input id="authorName" type="text" placeholder="Machado de Assis" required>
+        </label>
+        <label>
+          E-mail
+          <input id="authorEmail" type="email" placeholder="autor@email.com">
+        </label>
+        <div class="actions">
+          <button type="submit">Salvar autor</button>
+          <button id="clearAuthorButton" class="secondary" type="button">Limpar</button>
+        </div>
+      </form>
+
+      <div id="authorsList" class="list"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panelHeader">
+        <h2>Livros</h2>
+        <span id="bookCount">0</span>
+      </div>
+
+      <form id="bookForm" class="form">
+        <input id="bookId" type="hidden">
+        <label>
+          Titulo
+          <input id="bookTitle" type="text" placeholder="Dom Casmurro" required>
+        </label>
+        <div class="grid2">
+          <label>
+            ISBN
+            <input id="bookIsbn" type="text" placeholder="978-85-359-0277-5" required>
+          </label>
+          <label>
+            Preco
+            <input id="bookPrice" type="number" min="0.01" step="0.01" placeholder="39.90" required>
+          </label>
+        </div>
+        <label>
+          IDs dos autores
+          <input id="bookAuthorIds" type="text" placeholder="1, 2, 3" required>
+        </label>
+        <div class="actions">
+          <button type="submit">Salvar livro</button>
+          <button id="clearBookButton" class="secondary" type="button">Limpar</button>
+        </div>
+      </form>
+
+      <div id="booksList" class="list"></div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

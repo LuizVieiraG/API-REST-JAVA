@@ -9,7 +9,7 @@ import java.util.Map;
 @RestController
 public class HomeController {
 
-    @GetMapping("/")
+    @GetMapping("/api/status")
     public Map<String, Object> home() {
         return Map.of(
                 "mensagem", "Livraria API em execução",

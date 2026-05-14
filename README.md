@@ -57,7 +57,10 @@ No terminal, dentro da pasta do projeto:
 java -jar target/livraria-api-0.0.1-SNAPSHOT.jar
 ```
 
-A API ficará disponível em: `http://localhost:8080`
+A aplicação ficará disponível em: `http://localhost:8080`
+
+- Frontend básico: `http://localhost:8080`
+- Status da API: `http://localhost:8080/api/status`
 
 ---
 
@@ -93,11 +96,12 @@ database/requests/
 
 ## Endpoints Disponíveis
 
-### Inicial
+### Frontend e Status
 
 | Método | URL | Descrição |
 |--------|-----|-----------|
-| GET | / | Verifica se a API está em execução e lista os endpoints principais |
+| GET | / | Abre a interface web básica |
+| GET | /api/status | Verifica se a API está em execução e lista os endpoints principais |
 
 ### Autores
 
@@ -125,7 +129,7 @@ database/requests/
 
 ### Verificar API
 
-**GET** `http://localhost:8080/`
+**GET** `http://localhost:8080/api/status`
 
 **Resposta (200 OK):**
 ```json
