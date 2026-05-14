@@ -1,6 +1,8 @@
 # Livraria API
 
-API REST para sistema de gerenciamento de livraria, desenvolvida como trabalho final da disciplina de Programação Web Java.
+API REST para sistema de gerenciamento de livraria, desenvolvida como trabalho da disciplina de Desenvolvimento Web Java.
+
+Repositório: <https://github.com/LuizVieiraG/API-REST-JAVA>
 
 ## Tecnologias Utilizadas
 
@@ -37,7 +39,14 @@ spring.datasource.password=SUA_SENHA
 
 ## Como Executar o Projeto
 
-No terminal, dentro da pasta `livraria-api`:
+Clone o repositório:
+
+```bash
+git clone https://github.com/LuizVieiraG/API-REST-JAVA.git
+cd API-REST-JAVA
+```
+
+No terminal, dentro da pasta do projeto:
 
 ```bash
 # Usando o wrapper Maven incluído no projeto
@@ -66,6 +75,12 @@ A API ficará disponível em: `http://localhost:8080`
 
 ## Endpoints Disponíveis
 
+### Inicial
+
+| Método | URL | Descrição |
+|--------|-----|-----------|
+| GET | / | Verifica se a API está em execução e lista os endpoints principais |
+
 ### Autores
 
 | Método | URL | Descrição |
@@ -89,6 +104,23 @@ A API ficará disponível em: `http://localhost:8080`
 ---
 
 ## Exemplos de Requisições JSON
+
+### Verificar API
+
+**GET** `http://localhost:8080/`
+
+**Resposta (200 OK):**
+```json
+{
+  "mensagem": "Livraria API em execução",
+  "endpoints": [
+    "/api/autores",
+    "/api/livros"
+  ]
+}
+```
+
+---
 
 ### Cadastrar Autor
 
