@@ -73,6 +73,24 @@ A API ficará disponível em: `http://localhost:8080`
 
 ---
 
+## Banco de Dados para Entrega
+
+O projeto inclui um script SQL com a estrutura e uma massa de dados inicial:
+
+```text
+database/livraria_db_dump.sql
+```
+
+Esse arquivo cria o banco `livraria_db`, as tabelas `autores`, `livros` e `livro_autor`, além de inserir autores e livros para demonstração do CRUD e do relacionamento muitos-para-muitos.
+
+Também há exemplos de JSON usados para cadastrar dados pela API em:
+
+```text
+database/requests/
+```
+
+---
+
 ## Endpoints Disponíveis
 
 ### Inicial
